@@ -1,6 +1,6 @@
-862d502b32ef614a1a3e9e01f42490d3 *DESCRIPTION
-902dd310602be330052e166b0062273e *NAMESPACE
-0dfd510019bc2ee74e62e4fae7adfbeb *R/distfree.cr.R
+2aa9503b9334b84c0d9ac0b5c47733fb *DESCRIPTION
+1a4d7f2c9fd0c6a1f7d23ec6248d41b5 *NAMESPACE
+dd63115aaf0b33d53ac050ce9b1ff7a4 *R/distfree.cr.R
 ff339d434cb2e5b0948a12bcc1cda08e *man/distfree.cr-package.Rd
-84c8bc3a80143a2c2f6b4e66b1ed36f7 *man/distfree.cr.Rd
+b3ae517024d044f51dfd91c4301dfc8b *man/distfree.cr.Rd
 81e8db37e6e3c7272793935a58d3e461 *man/plot.distfree.cr.Rd

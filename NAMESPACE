@@ -1,1 +1,5 @@
 exportPattern(distfree.cr, plot.distfree.cr)
+S3method(plot, distfree.cr)
+importFrom("graphics", "legend", "plot", "points", "polygon")
+importFrom("stats", "na.exclude", "quantile")
+

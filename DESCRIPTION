@@ -1,16 +1,16 @@
 Package: distfree.cr
 Type: Package
-Title: Distribution-free confidence region (distfree.cr)
-Version: 1.0
-Date: 2012-11-23
+Title: Distribution-Free Confidence Region
+Version: 1.5.1
+Date: 2018-06-13
 Author: Zhiqiu Hu, Rong-cai Yang
 Maintainer: Zhiqiu Hu <zhiqiu.hu@gmail.com>
-Description: An R package that is developed for constructing confidence
-        regions without the need to know the sampling distribution of
-        bivariate data.
+Description: Constructs confidence regions without the need to know the sampling distribution of bivariate data. The method was proposed by Zhiqiu Hu & Rong-cai Yang (2013) <doi:10.1371/journal.pone.0081179.g001>. 
 Depends: R (>= 2.10)
 License: GPL (>= 2)
 URL: http://statgen.ualberta.ca
-Packaged: 2012-11-26 17:49:17 UTC; Statgen
+RoxygenNote: 6.0.1
+NeedsCompilation: no
+Packaged: 2018-06-15 14:10:34 UTC; statgen
 Repository: CRAN
-Date/Publication: 2012-11-26 18:05:45
+Date/Publication: 2018-06-15 14:21:16 UTC

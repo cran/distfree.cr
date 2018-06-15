@@ -4,10 +4,12 @@
 distfree.cr
 }
 \description{
-A function that is used to construct empirical confidence regions for bivariate data based on the method proposed by Zhiqiu Hu and Rong-cai Yang.
+Constructs empirical confidence regions for bivariate data based on the method proposed by Zhiqiu Hu and Rong-cai Yang(2013) <doi:10.1371/journal.pone.0081179.g001>.
 }
 \usage{
-distfree.cr(x, y, alpha = 0.05, alpha.min.diff = alpha/10, nknots = 40, xlab = deparse(substitute(x)), ylab = deparse(substitute(y)), col = c("red", "black", "gray"), draw = T)
+distfree.cr(x, y, alpha = 0.05, alpha.min.diff = 0.5/NROW(x), nknots = 40, 
+            xlab = deparse(substitute(x)), ylab = deparse(substitute(y)), 
+            col = c("red", "black", "gray"), draw = T)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -27,10 +29,10 @@ This function constructs a distribution-free confidence region based on the meth
 \value{
 
 \item{alpha.realized}{Realized-alpha, which is defined as the proportion of the total points outside the confidence region.}
-\item{polygon}{: 'data.frame' of x,y providing the apexes of the lines.}
-\item{polygon.smooth1}{: 'data.frame' of x,y providing the apexes of the smoothed polygon 1.}
-\item{polygon.smooth2}{: 'data.frame' of x,y providing the apexes of the smoothed polygon 2.}
-\item{data}{: 'data.frame', of dimension \emph{nobs} * 3, the first two columns are input data of x and y values and the third column \code{data$pip} are indicators of whether the points are within (\code{1}) or outside (\code{0}) the confidence region.}
+\item{polygon}{'data.frame' of x,y providing the apexes of the lines.}
+\item{polygon.smooth1}{'data.frame' of x,y providing the apexes of the smoothed polygon 1.}
+\item{polygon.smooth2}{'data.frame' of x,y providing the apexes of the smoothed polygon 2.}
+\item{data}{'data.frame', of dimension \emph{nobs} * 3, the first two columns are input data of x and y values and the third column \code{data$pip} are indicators of whether the points are within (\code{1}) or outside (\code{0}) the confidence region.}
 \item{alpha,xlab,ylab,col}{values assigned by users.}
 }
 
@@ -43,7 +45,8 @@ A smooth confidence region can be achieved by setting up a big number for input 
 
 \examples{
 library(distfree.cr)
-dat=data.frame(x=c(rnorm(3000), rnorm(3000, mean=1, sd=2.5)), y=c(rnorm(3000), rnorm(3000, mean=1, sd=2.5)))
+dat=data.frame(x=c(rnorm(3000), rnorm(3000, mean=1, sd=2.5)), 
+               y=c(rnorm(3000), rnorm(3000, mean=1, sd=2.5)))
 pt=distfree.cr(dat, draw=TRUE, alpha=0.05)
 pt=distfree.cr(x=dat$x, y=dat$y, draw=FALSE)
 plot(pt)
